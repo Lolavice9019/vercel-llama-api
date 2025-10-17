@@ -4,13 +4,13 @@ import fetch from "node-fetch";
 const app = express();
 app.use(express.json());
 
-const HF_MODEL_URL = "https://api-inference.huggingface.co/models/mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated";
+const HF_MODEL_URL = "https://api-inference.huggingface.co/models/meta-llama/Llama-3.2-3B-Instruct";
 
 // Health check endpoint
 app.get("/", (req, res) => {
   res.json({
     status: "active",
-    model: "mlabonne/Meta-Llama-3.1-8B-Instruct-abliterated",
+    model: "meta-llama/Llama-3.2-3B-Instruct",
     endpoint: "/api/llama"
   });
 });
